@@ -1,0 +1,90 @@
+[gd_scene load_steps=10 format=3 uid="uid://cwim68g68kucg"]
+
+[ext_resource type="Texture2D" uid="uid://b2wvxs7q6vf02" path="res://Assets/Story1 sprites/1.png" id="1_dwk7h"]
+[ext_resource type="Script" uid="uid://c7ksongcsem2i" path="res://Scripts/story_8.gd" id="1_uiwqa"]
+[ext_resource type="Texture2D" uid="uid://t270dkqwkvcj" path="res://Assets/Story1 sprites/clouds_2.png" id="2_tfgek"]
+[ext_resource type="Texture2D" uid="uid://dg0k88c8sgqq" path="res://Assets/Sprites/Untitled152_20250913042148.png" id="3_84m1a"]
+[ext_resource type="Texture2D" uid="uid://cehu0vojgffpi" path="res://Assets/Sprites/pb.png" id="4_tfgek"]
+[ext_resource type="Texture2D" uid="uid://c54bdg48hdvag" path="res://Assets/Sprites/Untitled153_20250913042538.png" id="5_84m1a"]
+[ext_resource type="PackedScene" uid="uid://duyy0b8vbo87a" path="res://Scenes/pause_menu.tscn" id="7_27kob"]
+
+[sub_resource type="Animation" id="Animation_uiwqa"]
+resource_name = "new_animation"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(120, 274), Vector2(784, 274)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4krw6"]
+_data = {
+&"new_animation": SubResource("Animation_uiwqa")
+}
+
+[node name="story8" type="Node2D"]
+script = ExtResource("1_uiwqa")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(0, 54)
+repeat_size = Vector2(684, 0)
+autoscroll = Vector2(10, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(320, 122)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_dwk7h")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 0.3)
+scroll_offset = Vector2(-53, -22)
+repeat_size = Vector2(384, 0)
+autoscroll = Vector2(-20, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3"]
+position = Vector2(200, 147)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_tfgek")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(330, 163)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("3_84m1a")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+repeat_size = Vector2(96, 0)
+repeat_times = 10
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(348, 336)
+scale = Vector2(3, 3)
+skew = 0.898845
+texture = ExtResource("4_tfgek")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(120, 274)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_84m1a")
+flip_h = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_4krw6")
+}
+autoplay = "new_animation"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_27kob")]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

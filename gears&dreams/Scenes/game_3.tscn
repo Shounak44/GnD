@@ -1,0 +1,123 @@
+[gd_scene load_steps=13 format=3 uid="uid://6vcu343flivb"]
+
+[ext_resource type="Script" uid="uid://c02gx5l2kcw3l" path="res://Scripts/game_3.gd" id="1_cfkw6"]
+[ext_resource type="Texture2D" uid="uid://bm66ouwnpsodp" path="res://Assets/Sprites/ChatGPT Image Sep 13, 2025, 03_29_25 AM.png" id="1_orsra"]
+[ext_resource type="Texture2D" uid="uid://bhv4v4pj7ld1c" path="res://Assets/Sprites/Untitled149_20250913032547.png" id="2_yfsey"]
+[ext_resource type="Texture2D" uid="uid://xnb1hhswe06x" path="res://Assets/Sprites/Untitled150_20250913032903.png" id="3_cfkw6"]
+[ext_resource type="Texture2D" uid="uid://bdecc3tjwtmfh" path="res://Assets/Sprites/Untitled151_20250913033340.png" id="4_g7ox3"]
+[ext_resource type="Texture2D" uid="uid://bkbmr6piuovvs" path="res://Assets/Sprites/door1-1.png" id="6_ouyso"]
+[ext_resource type="Texture2D" uid="uid://duoxfd2nh1emm" path="res://Assets/Sprites/door3-1.png" id="7_ithtj"]
+[ext_resource type="Texture2D" uid="uid://b8j17yg4jqj6t" path="res://Assets/Sprites/door2-1.png" id="8_v12c0"]
+[ext_resource type="PackedScene" uid="uid://duyy0b8vbo87a" path="res://Scenes/pause_menu.tscn" id="9_ithtj"]
+[ext_resource type="Script" uid="uid://ciejk7tbiuyoi" path="res://Scripts/texture_button4.gd" id="10_qiawf"]
+[ext_resource type="Texture2D" uid="uid://c178agp1hw3fe" path="res://Assets/Sprites/Untitled design 2.png" id="11_miv21"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ithtj"]
+load_path = "res://.godot/imported/—Pngtree—info icon_3550246.png-706270a415a7a2a09aff597490fc6f18.ctex"
+
+[node name="game3" type="Node2D"]
+script = ExtResource("1_cfkw6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320, 165)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("1_orsra")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(243, 211)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_yfsey")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(246, 210)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_cfkw6")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(251, 211)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_g7ox3")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 479.0
+offset_top = 229.0
+offset_right = 490.0
+offset_bottom = 260.0
+
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(437, 228)
+scale = Vector2(0.510455, 0.687223)
+texture = ExtResource("6_ouyso")
+region_enabled = true
+region_rect = Rect2(71.5, 159, 132, 36)
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(437, 255)
+scale = Vector2(0.510455, 0.687223)
+texture = ExtResource("7_ithtj")
+region_enabled = true
+region_rect = Rect2(71.5, 159, 132, 36)
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(437, 282)
+scale = Vector2(0.510455, 0.687223)
+texture = ExtResource("8_v12c0")
+region_enabled = true
+region_rect = Rect2(71.5, 159, 132, 36)
+
+[node name="SpinBox" type="SpinBox" parent="."]
+offset_left = 408.0
+offset_top = 217.0
+offset_right = 495.0
+offset_bottom = 248.0
+scale = Vector2(0.7, 0.7)
+
+[node name="SpinBox2" type="SpinBox" parent="."]
+offset_left = 409.0
+offset_top = 244.0
+offset_right = 495.563
+offset_bottom = 275.0
+scale = Vector2(0.7, 0.7)
+
+[node name="SpinBox3" type="SpinBox" parent="."]
+offset_left = 409.0
+offset_top = 271.0
+offset_right = 495.562
+offset_bottom = 302.0
+scale = Vector2(0.7, 0.7)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("9_ithtj")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer2"]
+offset_left = 4.0
+offset_top = 1.0
+offset_right = 804.0
+offset_bottom = 801.0
+scale = Vector2(0.07, 0.07)
+texture_normal = SubResource("CompressedTexture2D_ithtj")
+script = ExtResource("10_qiawf")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(89, 75)
+scale = Vector2(0.0855, 0.09125)
+texture = ExtResource("11_miv21")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Sprite2D8"]
+position = Vector2(315.789, -109.589)
+scale = Vector2(1.16959, 1.09589)
+
+[node name="Label" type="Label" parent="Sprite2D8/Sprite2D9"]
+offset_left = -1030.0
+offset_top = 99.9996
+offset_right = 522.0
+offset_bottom = 441.0
+theme_override_font_sizes/font_size = 60
+text = "Enter the code in the electric box to open it.
+
+When completed,
+Press enter to progress."

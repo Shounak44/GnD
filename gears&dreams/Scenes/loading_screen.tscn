@@ -1,0 +1,146 @@
+[gd_scene load_steps=18 format=3 uid="uid://cfc3cyuy6mpyf"]
+
+[ext_resource type="Script" uid="uid://tcyarocqb2jh" path="res://Scripts/loading_screen.gd" id="1_fayou"]
+[ext_resource type="Texture2D" uid="uid://b04xb5xian8i2" path="res://Assets/Sprites/Untitled design.png" id="1_nfm0g"]
+[ext_resource type="Texture2D" uid="uid://73hg1n083np" path="res://Assets/Sprites/ChatGPT Image Sep 5, 2025, 02_42_28 AM.png" id="2_fayou"]
+[ext_resource type="Texture2D" uid="uid://baetxy7mbny6m" path="res://Assets/Sprites/Pixel Fire Asset Pack V1/Fire 4 - 3/Fire 4 - 3.png" id="3_1godw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gegoj"]
+atlas = ExtResource("3_1godw")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2hk5"]
+atlas = ExtResource("3_1godw")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1opfs"]
+atlas = ExtResource("3_1godw")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xbrhi"]
+atlas = ExtResource("3_1godw")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iom8t"]
+atlas = ExtResource("3_1godw")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nw6gx"]
+atlas = ExtResource("3_1godw")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8yqx"]
+atlas = ExtResource("3_1godw")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbyj8"]
+atlas = ExtResource("3_1godw")
+region = Rect2(224, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5emdp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gegoj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m2hk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1opfs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xbrhi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iom8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nw6gx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8yqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbyj8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_4v7p6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_umxys"]
+resource_name = "new_animation"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.360784), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b2msm"]
+_data = {
+&"RESET": SubResource("Animation_4v7p6"),
+&"new_animation": SubResource("Animation_umxys")
+}
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fayou"]
+texture = ExtResource("1_nfm0g")
+
+[node name="LoadingScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_fayou")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(591, 320)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_fayou")
+region_enabled = true
+region_rect = Rect2(266.099, 196.043, 1029.4, 684.178)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/Sprite2D"]
+texture_filter = 1
+position = Vector2(379.999, -360)
+scale = Vector2(20, 20)
+sprite_frames = SubResource("SpriteFrames_5emdp")
+autoplay = "default"
+frame_progress = 0.127694
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_b2msm")
+}
+autoplay = "new_animation"
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0.235294)
+layout_mode = 0
+offset_right = 653.0
+offset_bottom = 380.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_fayou")

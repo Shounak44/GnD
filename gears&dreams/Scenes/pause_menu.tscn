@@ -1,0 +1,64 @@
+[gd_scene load_steps=9 format=3 uid="uid://duyy0b8vbo87a"]
+
+[ext_resource type="Script" uid="uid://b0u7kbhs4a5ap" path="res://Scripts/pause_menu.gd" id="1_u8tnp"]
+[ext_resource type="Texture2D" uid="uid://drgdpi5ws8hq4" path="res://Assets/Sprites/97f2834f-01c4-4aba-8cf1-78ed5a324938.jpg" id="2_stj27"]
+[ext_resource type="Texture2D" uid="uid://mwh7f5plglyu" path="res://Assets/Sprites/Prinbles_Buttons_Analogue_I (v 1.0.1) (9_5_2023)/Prinbles_Buttons_Analogue_I (v 1.0.1) (9_5_2023)/png@2x/Square-Dark-Default/Play@2x.png" id="3_ix48p"]
+[ext_resource type="Texture2D" uid="uid://blumosumj2k6w" path="res://Assets/Sprites/Prinbles_Buttons_Analogue_I (v 1.0.1) (9_5_2023)/Prinbles_Buttons_Analogue_I (v 1.0.1) (9_5_2023)/png@2x/Square-Dark-Hover/Play@2x.png" id="4_524vl"]
+[ext_resource type="Texture2D" uid="uid://dda6lx21tt4k2" path="res://Assets/Sprites/Prinbles_Buttons_Analogue_I (v 1.0.1) (9_5_2023)/Prinbles_Buttons_Analogue_I (v 1.0.1) (9_5_2023)/png@2x/Square-Dark-Default/Home@2x.png" id="5_0fi7f"]
+[ext_resource type="Texture2D" uid="uid://bc8trayxyqun4" path="res://Assets/Sprites/Prinbles_Buttons_Analogue_I (v 1.0.1) (9_5_2023)/Prinbles_Buttons_Analogue_I (v 1.0.1) (9_5_2023)/png@2x/Square-Dark-Hover/Home@2x.png" id="6_uscpe"]
+[ext_resource type="Texture2D" uid="uid://dmmoaei43mvhw" path="res://Assets/Sprites/Prinbles_Buttons_Analogue_I (v 1.0.1) (9_5_2023)/Prinbles_Buttons_Analogue_I (v 1.0.1) (9_5_2023)/png@2x/Square-Dark-Default/Exit@2x.png" id="7_taale"]
+[ext_resource type="Texture2D" uid="uid://brwj4ky03dii4" path="res://Assets/Sprites/Prinbles_Buttons_Analogue_I (v 1.0.1) (9_5_2023)/Prinbles_Buttons_Analogue_I (v 1.0.1) (9_5_2023)/png@2x/Square-Dark-Hover/Exit@2x.png" id="8_q7fiq"]
+
+[node name="PauseMenu" type="Control"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_u8tnp")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.89, 0.89, 0.89, 0.607843)
+position = Vector2(322, 179)
+texture = ExtResource("2_stj27")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 184.0
+offset_top = 144.0
+offset_right = 573.0
+offset_bottom = 247.0
+scale = Vector2(0.7, 0.7)
+theme_override_constants/separation = 40
+
+[node name="Reume Button" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("3_ix48p")
+texture_pressed = ExtResource("3_ix48p")
+texture_hover = ExtResource("4_524vl")
+
+[node name="Main Menu Button" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("5_0fi7f")
+texture_pressed = ExtResource("5_0fi7f")
+texture_hover = ExtResource("6_uscpe")
+
+[node name="Exit" type="TextureButton" parent="HBoxContainer"]
+layout_mode = 2
+texture_normal = ExtResource("7_taale")
+texture_pressed = ExtResource("7_taale")
+texture_hover = ExtResource("8_q7fiq")
+
+[connection signal="pressed" from="HBoxContainer/Reume Button" to="." method="_on_reume_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Main Menu Button" to="." method="_on_main_menu_button_pressed"]
+[connection signal="pressed" from="HBoxContainer/Exit" to="." method="_on_exit_pressed"]

@@ -1,0 +1,101 @@
+[gd_scene load_steps=11 format=3 uid="uid://dysi6ufy07nf8"]
+
+[ext_resource type="Texture2D" uid="uid://b2wvxs7q6vf02" path="res://Assets/Story1 sprites/1.png" id="1_sxg8r"]
+[ext_resource type="Texture2D" uid="uid://t270dkqwkvcj" path="res://Assets/Story1 sprites/clouds_2.png" id="2_go8ly"]
+[ext_resource type="Texture2D" uid="uid://bv31hamlogwl5" path="res://Assets/Sprites/Untitled138_20250907033220-Photoroom-Photoroom.png" id="3_go8ly"]
+[ext_resource type="Texture2D" uid="uid://dj76s0x7incme" path="res://Assets/Sprites/vudlduvv-Photoroom.png" id="5_rtm6q"]
+[ext_resource type="Script" uid="uid://d4my2yyyswtwl" path="res://Scripts/dialog_panel3.gd" id="6_mdftw"]
+[ext_resource type="Texture2D" uid="uid://drgdpi5ws8hq4" path="res://Assets/Sprites/97f2834f-01c4-4aba-8cf1-78ed5a324938.jpg" id="6_wbsir"]
+[ext_resource type="PackedScene" uid="uid://duyy0b8vbo87a" path="res://Scenes/pause_menu.tscn" id="7_wbsir"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mdftw"]
+texture = ExtResource("5_rtm6q")
+
+[sub_resource type="Animation" id="Animation_miyq1"]
+resource_name = "fade3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j5yg0"]
+_data = {
+&"fade3": SubResource("Animation_miyq1")
+}
+
+[node name="story4" type="Node2D"]
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(0, 54)
+repeat_size = Vector2(684, 0)
+autoscroll = Vector2(10, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(317, 106)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_sxg8r")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 0.3)
+scroll_offset = Vector2(-856, 39)
+repeat_size = Vector2(960, 0)
+autoscroll = Vector2(-20, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3"]
+position = Vector2(213, 211)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_go8ly")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(320, 185)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_go8ly")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogPanel" type="Panel" parent="CanvasLayer"]
+offset_left = 465.0
+offset_top = 200.0
+offset_right = 640.0
+offset_bottom = 327.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_mdftw")
+script = ExtResource("6_mdftw")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/DialogPanel"]
+layout_mode = 0
+offset_left = 34.0
+offset_top = 21.0
+offset_right = 141.0
+offset_bottom = 105.0
+
+[node name="DialogueText" type="RichTextLabel" parent="CanvasLayer/DialogPanel/MarginContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.44, 0.255493, 0.1408, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(297, 151)
+texture = ExtResource("6_wbsir")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+root_node = NodePath("../Sprite2D")
+libraries = {
+&"": SubResource("AnimationLibrary_j5yg0")
+}
+autoplay = "fade3"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource("7_wbsir")]

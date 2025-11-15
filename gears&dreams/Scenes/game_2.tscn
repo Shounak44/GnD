@@ -1,0 +1,80 @@
+[gd_scene load_steps=10 format=3 uid="uid://xilhqm573160"]
+
+[ext_resource type="Texture2D" uid="uid://cajjoe6cvpi55" path="res://Assets/Sprites/ChatGPT Image Sep 6, 2025, 11_39_06 PM.png" id="1_fyfmi"]
+[ext_resource type="Script" uid="uid://djn5a7jjs8uqg" path="res://Scripts/puzzle_board_2.gd" id="2_pl37j"]
+[ext_resource type="Texture2D" uid="uid://c21psttkqwuqb" path="res://Assets/Sprites/ChatGPT Image Sep 13, 2025, 02_09_32 AM.png" id="3_vs030"]
+[ext_resource type="Texture2D" uid="uid://drgdpi5ws8hq4" path="res://Assets/Sprites/97f2834f-01c4-4aba-8cf1-78ed5a324938.jpg" id="4_b0pau"]
+[ext_resource type="Texture2D" uid="uid://dsfq16gkqp5eh" path="res://Assets/Sprites/—Pngtree—info icon_3550246.png" id="5_cw6qx"]
+[ext_resource type="Script" uid="uid://ckslkdxeqj0vf" path="res://Scripts/texture_button3.gd" id="6_pej7n"]
+[ext_resource type="Texture2D" uid="uid://c178agp1hw3fe" path="res://Assets/Sprites/Untitled design 2.png" id="7_euurl"]
+[ext_resource type="Texture2D" uid="uid://sf1qpkk2lw8w" path="res://Assets/Sprites/Web_Photo_Editor.jpg" id="8_pej7n"]
+[ext_resource type="PackedScene" uid="uid://duyy0b8vbo87a" path="res://Scenes/pause_menu.tscn" id="9_pej7n"]
+
+[node name="game2" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(326, 201)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_fyfmi")
+region_enabled = true
+region_rect = Rect2(0, 71.0509, 1024, 869.345)
+
+[node name="PuzzleBoard2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 197.0
+offset_top = 58.0
+offset_right = 447.0
+offset_bottom = 308.0
+script = ExtResource("2_pl37j")
+puzzle_texture = ExtResource("3_vs030")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.133333)
+position = Vector2(322, 182)
+scale = Vector2(0.195, 0.347)
+texture = ExtResource("4_b0pau")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 804.0
+offset_bottom = 803.0
+scale = Vector2(0.07, 0.07)
+texture_normal = ExtResource("5_cw6qx")
+script = ExtResource("6_pej7n")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(89, 124)
+scale = Vector2(0.0855, 0.1525)
+texture = ExtResource("7_euurl")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D3"]
+position = Vector2(315.789, -386.885)
+scale = Vector2(1.16959, 0.655738)
+texture = ExtResource("8_pej7n")
+
+[node name="Label" type="Label" parent="Sprite2D3/Sprite2D4"]
+offset_left = -1010.0
+offset_top = 590.0
+offset_right = 478.0
+offset_bottom = 1705.0
+theme_override_font_sizes/font_size = 60
+text = "Think of this system like a giant power-up machine. 
+The boiler works as a heat blaster, turning water into 
+super-hot steam. That steam charges into the 
+turbine like rocket fuel, making it spin fast. The 
+turbine is connected to a generator
+imagine it as a city-sized battery charger 
+— converting that spin into 11 kV of electricity that 
+powers homes, schools, and even future tech labs
+
+When completed,
+Press enter to progress."
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource("9_pej7n")]

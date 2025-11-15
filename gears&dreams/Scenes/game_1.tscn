@@ -1,0 +1,96 @@
+[gd_scene load_steps=10 format=3 uid="uid://cdjuqn8h7no76"]
+
+[ext_resource type="Texture2D" uid="uid://cajjoe6cvpi55" path="res://Assets/Sprites/ChatGPT Image Sep 6, 2025, 11_39_06 PM.png" id="1_o8rjv"]
+[ext_resource type="Script" uid="uid://cb8ko1vr4t8a8" path="res://Scripts/puzzle_board.gd" id="2_oux1a"]
+[ext_resource type="Texture2D" uid="uid://dxnke5f05hki2" path="res://Assets/Sprites/ChatGPT Image Sep 7, 2025, 01_01_03 AM (1).png" id="3_syfnt"]
+[ext_resource type="Texture2D" uid="uid://c178agp1hw3fe" path="res://Assets/Sprites/Untitled design 2.png" id="5_3xikc"]
+[ext_resource type="Script" uid="uid://vho8a34p3nsw" path="res://Scripts/texture_button.gd" id="5_phes7"]
+[ext_resource type="AudioStream" uid="uid://dgbymn00ciktp" path="res://Sounds/Rajasthani Background Music  Indian Folk Music  Copyright Free.mp3" id="7_xwqjx"]
+[ext_resource type="Texture2D" uid="uid://drgdpi5ws8hq4" path="res://Assets/Sprites/97f2834f-01c4-4aba-8cf1-78ed5a324938.jpg" id="8_s6xdc"]
+[ext_resource type="PackedScene" uid="uid://duyy0b8vbo87a" path="res://Scenes/pause_menu.tscn" id="9_ubyxq"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_s6xdc"]
+load_path = "res://.godot/imported/—Pngtree—info icon_3550246.png-706270a415a7a2a09aff597490fc6f18.ctex"
+
+[node name="Game1" type="Node2D"]
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(323, 178)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_o8rjv")
+region_enabled = true
+region_rect = Rect2(0, 71.0509, 1024, 869.345)
+
+[node name="PuzzleBoard" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 197.0
+offset_top = 58.0
+offset_right = 447.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_oux1a")
+puzzle_texture = ExtResource("3_syfnt")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer"]
+offset_left = 16.0
+offset_top = 20.0
+offset_right = 816.0
+offset_bottom = 820.0
+scale = Vector2(0.07, 0.07)
+texture_normal = SubResource("CompressedTexture2D_s6xdc")
+script = ExtResource("5_phes7")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(98.5, 128)
+scale = Vector2(0.0855, 0.1525)
+texture = ExtResource("5_3xikc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(316.062, -407.435)
+scale = Vector2(4.02073, 2.34387)
+texture = ExtResource("3_syfnt")
+
+[node name="Label" type="Label" parent="Sprite2D/Sprite2D"]
+offset_left = -306.701
+offset_top = 134.496
+offset_right = 140.299
+offset_bottom = 508.496
+theme_override_font_sizes/font_size = 18
+text = "“Built in 1724, Jantar Mantar is like a giant stone 
+ clock and telescope.
+
+Its walls and sundials were so precise,
+they could tell the exact time, track the sun’s path,
+and even spot stars and planets all without 
+machines!
+
+Its not just an architecture but a humongous stone 
+computer!”
+
+When completed,
+Press enter to progress."
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_xwqjx")
+autoplay = true
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.133333)
+position = Vector2(322, 182)
+scale = Vector2(0.195, 0.347)
+texture = ExtResource("8_s6xdc")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource("9_ubyxq")]

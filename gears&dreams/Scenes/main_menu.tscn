@@ -1,0 +1,163 @@
+[gd_scene load_steps=20 format=3 uid="uid://c34y3u27wywgy"]
+
+[ext_resource type="Texture2D" uid="uid://b04xb5xian8i2" path="res://Assets/Sprites/Untitled design.png" id="1_28flt"]
+[ext_resource type="Script" uid="uid://c1afn6t0gaibr" path="res://Scripts/main_menu.gd" id="1_cp0ys"]
+[ext_resource type="Texture2D" uid="uid://daer1uiqir634" path="res://Assets/Sprites/ChatGPT Image Sep 5, 2025, 12_33_07 AM.png" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://dt5x1fxm2vpqc" path="res://Assets/Sprites/ChatGPT Image Sep 5, 2025, 02_01_01 AM.png" id="2_opfnp"]
+[ext_resource type="FontFile" uid="uid://qy0jys802kel" path="res://Assets/Fonts/bharvati/Bharvati Demo Ink Bleed.ttf" id="3_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://dgoajo23rq377" path="res://Assets/Sprites/gears_and_dreams_bharvati_large.png" id="4_ce3w2"]
+[ext_resource type="AudioStream" uid="uid://c6u47ald2g6f6" path="res://Sounds/free-india-music-396377.mp3" id="5_n45e2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_48xlc"]
+texture = ExtResource("1_28flt")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ce3w2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_n45e2"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_opfnp"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cp0ys"]
+bg_color = Color(0.6, 0.6, 0.6, 0.0117647)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yhxw7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_trj04"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_16hvj"]
+bg_color = Color(1, 1, 1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vr1f0"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="Animation" id="Animation_ce3w2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1ehe0"]
+resource_name = "wheel"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.628319, 1.25664, 1.88496, 2.51327, 3.14159, 3.76991, 4.39823, 5.02655, 5.65487, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_n45e2"]
+_data = {
+&"RESET": SubResource("Animation_ce3w2"),
+&"wheel": SubResource("Animation_1ehe0")
+}
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cp0ys")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_48xlc")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(0.562541, 0.294013, 1.92523e-07, 1)
+position = Vector2(322.5, 180.5)
+scale = Vector2(0.435547, 0.366211)
+texture = ExtResource("2_opfnp")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 97.0
+offset_top = 1.0
+offset_right = 227.0
+offset_bottom = 67.0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+theme_override_constants/separation = 10
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ce3w2")
+theme_override_styles/hover = SubResource("StyleBoxFlat_n45e2")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_opfnp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cp0ys")
+text = "Play"
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_yhxw7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_trj04")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_16hvj")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vr1f0")
+text = "Quit"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_n45e2")
+}
+autoplay = "wheel"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(472, 183)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_48xlc")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 181.6
+offset_top = 125.4
+offset_right = 494.6
+offset_bottom = 180.4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_ce3w2")
+theme_override_font_sizes/font_size = 20
+text = "&"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(201.6, 139.4)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_ce3w2")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_n45e2")
+volume_db = -15.0
+autoplay = true
+
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_quit_pressed"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=10 format=3 uid="uid://buh2k186jemc0"]
+
+[ext_resource type="Texture2D" uid="uid://cajjoe6cvpi55" path="res://Assets/Sprites/ChatGPT Image Sep 6, 2025, 11_39_06 PM.png" id="1_e64ab"]
+[ext_resource type="Texture2D" uid="uid://drgdpi5ws8hq4" path="res://Assets/Sprites/97f2834f-01c4-4aba-8cf1-78ed5a324938.jpg" id="2_6vupb"]
+[ext_resource type="Script" uid="uid://b71j504j2b1pi" path="res://Scripts/puzzle_board_3.gd" id="2_i02mk"]
+[ext_resource type="Texture2D" uid="uid://b6td7wvrkd1je" path="res://Assets/Sprites/ChatGPT Image Sep 13, 2025, 01_36_59 AM (1).png" id="3_i02mk"]
+[ext_resource type="PackedScene" uid="uid://duyy0b8vbo87a" path="res://Scenes/pause_menu.tscn" id="5_lsq81"]
+[ext_resource type="Texture2D" uid="uid://c178agp1hw3fe" path="res://Assets/Sprites/Untitled design 2.png" id="6_tsbw4"]
+[ext_resource type="Script" uid="uid://dq8k3ptsbss7" path="res://Scripts/texture_button6.gd" id="6_y2ofs"]
+[ext_resource type="Texture2D" uid="uid://dxxwe6oukw1b6" path="res://Assets/Sprites/image (1).png" id="7_y2ofs"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_lsq81"]
+load_path = "res://.godot/imported/—Pngtree—info icon_3550246.png-706270a415a7a2a09aff597490fc6f18.ctex"
+
+[node name="game5" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(326, 201)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("1_e64ab")
+region_enabled = true
+region_rect = Rect2(0, 71.0509, 1024, 869.345)
+
+[node name="PuzzleBoard3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 197.0
+offset_top = 58.0
+offset_right = 447.0
+offset_bottom = 308.0
+script = ExtResource("2_i02mk")
+puzzle_texture = ExtResource("3_i02mk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.133333)
+position = Vector2(322, 182)
+scale = Vector2(0.195, 0.347)
+texture = ExtResource("2_6vupb")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("5_lsq81")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer2"]
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 804.0
+offset_bottom = 803.0
+scale = Vector2(0.07, 0.07)
+texture_normal = SubResource("CompressedTexture2D_lsq81")
+script = ExtResource("6_y2ofs")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(89, 124)
+scale = Vector2(0.0855, 0.1525)
+texture = ExtResource("6_tsbw4")
+
+[node name="Sprite2D4" type="Sprite2D" parent="Sprite2D3"]
+position = Vector2(309.942, -419.672)
+scale = Vector2(4.63158, 2.51803)
+texture = ExtResource("7_y2ofs")
+
+[node name="Label" type="Label" parent="Sprite2D3/Sprite2D4"]
+offset_left = -276.515
+offset_top = 148.438
+offset_right = 113.485
+offset_bottom = 457.438
+theme_override_font_sizes/font_size = 16
+text = "“Used in the final stage of power distribution,
+the Induction Motor is the farmer’s trusted helper.
+
+With coils and magnetic fields,
+it spins smoothly without sparks or brushes.
+
+Strong and reliable,
+it powers pumps that lift water to fields,
+turning electricity into flowing life for crops!”
+
+When completed,
+Press enter to progress"

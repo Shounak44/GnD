@@ -1,0 +1,269 @@
+[gd_scene load_steps=37 format=3 uid="uid://douxm1ba36613"]
+
+[ext_resource type="Script" uid="uid://cqu7r768a1se8" path="res://Scripts/story_6.gd" id="1_0hupg"]
+[ext_resource type="Texture2D" uid="uid://bbwo0ii10qteg" path="res://Assets/Sprites/gradient.png" id="1_r1kc6"]
+[ext_resource type="Texture2D" uid="uid://t270dkqwkvcj" path="res://Assets/Story1 sprites/clouds_2.png" id="2_pq4tk"]
+[ext_resource type="Texture2D" uid="uid://cu5wc6pjc8ge7" path="res://Assets/Sprites/0142f208-d31b-4ba0-bca4-1e8a629bea18.png" id="3_pq4tk"]
+[ext_resource type="Texture2D" uid="uid://ci8evfl11jbbg" path="res://Assets/Sprites/Untitled144_20250912200221.png" id="4_1krbw"]
+[ext_resource type="Texture2D" uid="uid://n522rbkclgbd" path="res://Assets/Sprites/kissan1.png" id="4_5hrfq"]
+[ext_resource type="Texture2D" uid="uid://bafefpybsxvhv" path="res://Assets/Sprites/kissan2.png" id="5_ik32f"]
+[ext_resource type="Texture2D" uid="uid://duvmaf8pe0fcb" path="res://Assets/Sprites/kissan3.png" id="6_wkn86"]
+[ext_resource type="Texture2D" uid="uid://ct45u0ygo6667" path="res://Assets/char/mina/idle1.png" id="7_1krbw"]
+[ext_resource type="Texture2D" uid="uid://b7cw2er27u3ur" path="res://Assets/char/mina/idle2.png" id="8_yk0jo"]
+[ext_resource type="Texture2D" uid="uid://66os22kwx5bl" path="res://Assets/char/mina/idle3.png" id="9_66j0r"]
+[ext_resource type="Texture2D" uid="uid://cehh3wfetsi4i" path="res://Assets/char/mina/idle4.png" id="10_wj4og"]
+[ext_resource type="Texture2D" uid="uid://dj76s0x7incme" path="res://Assets/Sprites/vudlduvv-Photoroom.png" id="12_yk0jo"]
+[ext_resource type="Texture2D" uid="uid://d3s8pfimievo4" path="res://Assets/Sprites/image.png" id="13_66j0r"]
+[ext_resource type="Texture2D" uid="uid://c8gmf8vhofcda" path="res://Assets/Sprites/Untitled design (5)-Photoroom.png" id="14_66j0r"]
+[ext_resource type="PackedScene" uid="uid://duyy0b8vbo87a" path="res://Scenes/pause_menu.tscn" id="15_wj4og"]
+[ext_resource type="Texture2D" uid="uid://drgdpi5ws8hq4" path="res://Assets/Sprites/97f2834f-01c4-4aba-8cf1-78ed5a324938.jpg" id="16_8hlt7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hupg"]
+atlas = ExtResource("4_5hrfq")
+region = Rect2(0, 0, 889, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8hlt7"]
+atlas = ExtResource("5_ik32f")
+region = Rect2(0, 0, 889, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gg42"]
+atlas = ExtResource("6_wkn86")
+region = Rect2(0, 0, 889, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1xrcs"]
+atlas = ExtResource("5_ik32f")
+region = Rect2(0, 0, 889, 1024)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jfwl"]
+atlas = ExtResource("4_5hrfq")
+region = Rect2(0, 0, 889, 1024)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cxhwh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hupg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8hlt7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gg42")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1xrcs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jfwl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cagri"]
+atlas = ExtResource("7_1krbw")
+region = Rect2(0, 0, 853, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2opfp"]
+atlas = ExtResource("8_yk0jo")
+region = Rect2(0, 0, 853, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_epp6u"]
+atlas = ExtResource("9_66j0r")
+region = Rect2(0, 0, 853, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_psb3c"]
+atlas = ExtResource("10_wj4og")
+region = Rect2(0, 0, 853, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_luvon"]
+atlas = ExtResource("9_66j0r")
+region = Rect2(0, 0, 853, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r15sf"]
+atlas = ExtResource("8_yk0jo")
+region = Rect2(0, 0, 853, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10p5p"]
+atlas = ExtResource("7_1krbw")
+region = Rect2(0, 0, 853, 1280)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_de52x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cagri")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2opfp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_epp6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_psb3c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_luvon")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r15sf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10p5p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wj4og"]
+texture = ExtResource("12_yk0jo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0hupg"]
+texture = ExtResource("13_66j0r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8hlt7"]
+texture = ExtResource("14_66j0r")
+
+[sub_resource type="Animation" id="Animation_7gg42"]
+resource_name = "fade5"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2jfwl"]
+_data = {
+&"fade5": SubResource("Animation_7gg42")
+}
+
+[node name="story6" type="Node2D"]
+script = ExtResource("1_0hupg")
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 0.1)
+scroll_offset = Vector2(0, 54)
+repeat_size = Vector2(684, 0)
+autoscroll = Vector2(10, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(331, 30)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_r1kc6")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 0.3)
+scroll_offset = Vector2(-53, -22)
+repeat_size = Vector2(384, 0)
+autoscroll = Vector2(-20, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3"]
+position = Vector2(198, 141)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_pq4tk")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D"]
+position = Vector2(319, 185)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_pq4tk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(275, 195)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("4_1krbw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(180, 270)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_cxhwh")
+autoplay = "default"
+frame_progress = 0.343477
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(441, 271)
+scale = Vector2(0.15, 0.15)
+sprite_frames = SubResource("SpriteFrames_de52x")
+autoplay = "default"
+frame_progress = 0.799133
+flip_h = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BoxPanel" type="Panel" parent="CanvasLayer"]
+offset_left = 365.0
+offset_top = 6.0
+offset_right = 672.0
+offset_bottom = 122.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_wj4og")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/BoxPanel"]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 25.0
+offset_right = 242.0
+offset_bottom = 88.0
+
+[node name="DialogueText" type="RichTextLabel" parent="CanvasLayer/BoxPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="MinaPanel" type="Panel" parent="CanvasLayer"]
+offset_left = 106.0
+offset_top = -45.0
+offset_right = 556.0
+offset_bottom = 312.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_0hupg")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MinaPanel"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 115.0
+offset_right = 302.0
+offset_bottom = 190.0
+
+[node name="DialogueText" type="RichTextLabel" parent="CanvasLayer/MinaPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="FarmerPanel" type="Panel" parent="CanvasLayer"]
+offset_left = 81.0
+offset_top = 10.0
+offset_right = 488.0
+offset_bottom = 321.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_8hlt7")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/FarmerPanel"]
+layout_mode = 0
+offset_left = 135.0
+offset_top = 101.0
+offset_right = 253.0
+offset_bottom = 164.0
+
+[node name="DialogueText" type="RichTextLabel" parent="CanvasLayer/FarmerPanel/MarginContainer"]
+layout_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(156, 99)
+texture = ExtResource("16_8hlt7")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_2jfwl")
+}
+autoplay = "fade5"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource("15_wj4og")]

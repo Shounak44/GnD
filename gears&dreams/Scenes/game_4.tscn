@@ -1,0 +1,173 @@
+[gd_scene load_steps=18 format=3 uid="uid://cfvehvwqirn5"]
+
+[ext_resource type="Texture2D" uid="uid://be1xfo6fu4icx" path="res://Assets/Sprites/ChatGPT Image Sep 13, 2025, 04_25_59 AM.png" id="1_5u8dt"]
+[ext_resource type="Script" uid="uid://byswh5ejqtcfh" path="res://Scripts/game_4.gd" id="1_6lda1"]
+[ext_resource type="Texture2D" uid="uid://0jjuxrb7rkko" path="res://Assets/Sprites/pixilart-sprite - Kopi.png" id="2_1s2d5"]
+[ext_resource type="Texture2D" uid="uid://drgdpi5ws8hq4" path="res://Assets/Sprites/97f2834f-01c4-4aba-8cf1-78ed5a324938.jpg" id="3_3pnjy"]
+[ext_resource type="Texture2D" uid="uid://gdsmk2xtrctm" path="res://Assets/Sprites/Untitled design (7)-Photoroom.png" id="4_6lda1"]
+[ext_resource type="Texture2D" uid="uid://7sfptw15011y" path="res://Assets/Sprites/Untitled design (8)-Photoroom.png" id="5_63f6v"]
+[ext_resource type="PackedScene" uid="uid://duyy0b8vbo87a" path="res://Scenes/pause_menu.tscn" id="7_63f6v"]
+[ext_resource type="Script" uid="uid://bsdcu3hm0ul4w" path="res://Scripts/texture_button5.gd" id="8_31167"]
+[ext_resource type="Texture2D" uid="uid://c178agp1hw3fe" path="res://Assets/Sprites/Untitled design 2.png" id="8_pldnw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g48vu"]
+atlas = ExtResource("2_1s2d5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pnjy"]
+atlas = ExtResource("2_1s2d5")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lda1"]
+atlas = ExtResource("2_1s2d5")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63f6v"]
+atlas = ExtResource("2_1s2d5")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pldnw"]
+atlas = ExtResource("2_1s2d5")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pldnw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g48vu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pnjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lda1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63f6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pldnw")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_31167"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g48vu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pnjy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lda1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63f6v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pldnw")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_31167"]
+load_path = "res://.godot/imported/—Pngtree—info icon_3550246.png-706270a415a7a2a09aff597490fc6f18.ctex"
+
+[node name="game4" type="Node2D"]
+script = ExtResource("1_6lda1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(314, 174)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("1_5u8dt")
+
+[node name="Anim1" type="AnimatedSprite2D" parent="."]
+position = Vector2(183, 129)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_pldnw")
+
+[node name="Anim2" type="AnimatedSprite2D" parent="."]
+position = Vector2(185, 214)
+scale = Vector2(1.5, 1.5)
+sprite_frames = SubResource("SpriteFrames_31167")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.482353)
+position = Vector2(253, 128)
+texture = ExtResource("3_3pnjy")
+region_enabled = true
+region_rect = Rect2(459, 281.5, 56, 56)
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.482353)
+position = Vector2(254, 207)
+texture = ExtResource("3_3pnjy")
+region_enabled = true
+region_rect = Rect2(459, 281.5, 56, 56)
+
+[node name="Button1" type="TextureButton" parent="."]
+offset_left = 216.0
+offset_top = 88.0
+offset_right = 466.0
+offset_bottom = 338.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_6lda1")
+texture_pressed = ExtResource("5_63f6v")
+
+[node name="Button2" type="TextureButton" parent="."]
+offset_left = 216.0
+offset_top = 171.0
+offset_right = 466.0
+offset_bottom = 421.0
+scale = Vector2(0.3, 0.3)
+texture_normal = ExtResource("4_6lda1")
+texture_pressed = ExtResource("5_63f6v")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("7_63f6v")]
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="TextureButton" type="TextureButton" parent="CanvasLayer2"]
+offset_left = 4.0
+offset_top = 3.0
+offset_right = 804.0
+offset_bottom = 803.0
+scale = Vector2(0.07, 0.07)
+texture_normal = SubResource("CompressedTexture2D_31167")
+script = ExtResource("8_31167")
+
+[node name="Sprite2D8" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(89, 88.5)
+scale = Vector2(0.0855, 0.108125)
+texture = ExtResource("8_pldnw")
+
+[node name="Sprite2D9" type="Sprite2D" parent="Sprite2D8"]
+position = Vector2(315.789, -217.341)
+scale = Vector2(1.16959, 0.924856)
+
+[node name="Label" type="Label" parent="Sprite2D8/Sprite2D9"]
+offset_left = -1050.0
+offset_top = -0.000314713
+offset_right = 502.0
+offset_bottom = 943.0
+theme_override_font_sizes/font_size = 60
+text = "This is an electrical load.
+An electrical load is any device that uses electricity, 
+and to supply it safely, high transmission voltages 
+are reduced by a step-down transformer. The 
+voltage change depends on the turns ratio of the 
+coils—fewer turns in the secondary coil mean lower 
+output voltage.
+
+
+When completed,
+Press enter to progress."

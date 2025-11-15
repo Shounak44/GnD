@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgbymn00ciktp"
+path="res://.godot/imported/Rajasthani Background Music  Indian Folk Music  Copyright Free.mp3-60a2d79b3a1e586785b786f052fb3db7.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Rajasthani Background Music  Indian Folk Music  Copyright Free.mp3"
+dest_files=["res://.godot/imported/Rajasthani Background Music  Indian Folk Music  Copyright Free.mp3-60a2d79b3a1e586785b786f052fb3db7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

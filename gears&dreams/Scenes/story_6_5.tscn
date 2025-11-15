@@ -1,0 +1,394 @@
+[gd_scene load_steps=11 format=3 uid="uid://i67v2sbp3n61"]
+
+[ext_resource type="Script" uid="uid://ci0v2mvjxfus2" path="res://Scripts/story_6_5.gd" id="1_5rtj3"]
+[ext_resource type="Texture2D" uid="uid://dtbbr2he035vt" path="res://Assets/Sprites/ChatGPT Image Sep 12, 2025, 11_38_45 PM.png" id="1_rn4ji"]
+[ext_resource type="Texture2D" uid="uid://busallr5leon6" path="res://Assets/Sprites/ChatGPT Image Sep 12, 2025, 11_39_54 PM.png" id="2_vfom3"]
+[ext_resource type="Texture2D" uid="uid://ccp7rcgfogx4y" path="res://Assets/Sprites/ChatGPT Image Sep 12, 2025, 11_42_35 PM.png" id="3_7l0fl"]
+[ext_resource type="Texture2D" uid="uid://dw4axk0ck1sxl" path="res://Assets/Sprites/ChatGPT Image Sep 12, 2025, 11_47_34 PM.png" id="4_5rtj3"]
+[ext_resource type="Texture2D" uid="uid://dpskxiqw3fsjk" path="res://Assets/Sprites/Untitled146_20250913003319.png" id="5_7l0fl"]
+[ext_resource type="Texture2D" uid="uid://dj76s0x7incme" path="res://Assets/Sprites/vudlduvv-Photoroom.png" id="6_5rtj3"]
+
+[sub_resource type="Animation" id="Animation_xk2c7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D4:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D6:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D7:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label4:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Label5:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Sprite2D3:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_ion3d"]
+resource_name = "new_animation"
+length = 7.9
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D4:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3, 4.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D6:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D7:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 6, 8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Label:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Label2:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.5, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Label3:visible")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(3, 4.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Label4:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(4.5, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Label5:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(6, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Sprite2D3:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0, 8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_l4la8"]
+_data = {
+&"RESET": SubResource("Animation_xk2c7"),
+&"new_animation": SubResource("Animation_ion3d")
+}
+
+[node name="story6_5" type="Node2D"]
+script = ExtResource("1_5rtj3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(312, 174)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("1_rn4ji")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(312, 174)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("2_vfom3")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(312, 174)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("3_7l0fl")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(312, 174)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("4_5rtj3")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(312, 158)
+scale = Vector2(0.45, 0.45)
+texture = ExtResource("5_7l0fl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_l4la8")
+}
+autoplay = "new_animation"
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(65.75, 274.6)
+scale = Vector2(0.131641, 0.132031)
+texture = ExtResource("6_5rtj3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 231.0
+offset_right = 117.0
+offset_bottom = 328.0
+theme_override_font_sizes/font_size = 10
+text = "“A lone traveller
+wandered across the
+endless desert, 
+the sun burning
+down on him.”"
+
+[node name="Label2" type="Label" parent="."]
+visible = false
+offset_left = 22.0
+offset_top = 235.0
+offset_right = 141.0
+offset_bottom = 336.0
+theme_override_font_sizes/font_size = 10
+text = "“Water… food…
+if only I had a
+drop to drink,
+a grain to eat.”,
+He said."
+
+[node name="Label3" type="Label" parent="."]
+visible = false
+offset_left = 16.0
+offset_top = 231.0
+offset_right = 160.0
+offset_bottom = 358.0
+theme_override_font_sizes/font_size = 10
+text = "“Exhausted, he fell
+to the ground,
+his body giving up,
+but his heart still
+full of hope.”"
+
+[node name="Label4" type="Label" parent="."]
+visible = false
+offset_left = 13.0
+offset_top = 234.0
+offset_right = 126.0
+offset_bottom = 316.0
+theme_override_font_sizes/font_size = 10
+text = "“In his dream,
+a great tree appeared
+Kalpataru,
+the wish-fulfilling
+tree.”"
+
+[node name="Label5" type="Label" parent="."]
+visible = false
+offset_left = 19.0
+offset_top = 229.0
+offset_right = 130.0
+offset_bottom = 328.0
+theme_override_font_sizes/font_size = 8
+text = "“When he awoke, 
+the tree stood
+before him, and 
+beneath it lay
+food and water,
+just as he had wished.”"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

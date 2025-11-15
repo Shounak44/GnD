@@ -1,0 +1,179 @@
+[gd_scene load_steps=23 format=3 uid="uid://dopmmi6ebpv4b"]
+
+[ext_resource type="Texture2D" uid="uid://b2wvxs7q6vf02" path="res://Assets/Story1 sprites/1.png" id="1_3r3gk"]
+[ext_resource type="Texture2D" uid="uid://t270dkqwkvcj" path="res://Assets/Story1 sprites/clouds_2.png" id="2_laqmy"]
+[ext_resource type="Texture2D" uid="uid://5cioigjdcxf6" path="res://Assets/Story1 sprites/clouds_1.png" id="3_8rsoe"]
+[ext_resource type="Texture2D" uid="uid://cwfnojrmbwghw" path="res://Assets/char/mina/view.png" id="4_ns7m4"]
+[ext_resource type="Texture2D" uid="uid://d1tc8lnpwcke0" path="res://Assets/char/mina/view1.png" id="5_cpk6l"]
+[ext_resource type="Texture2D" uid="uid://d330prjth6lsi" path="res://Assets/char/mina/view3.png" id="6_oehgq"]
+[ext_resource type="AudioStream" uid="uid://beyhnf4y06siw" path="res://Sounds/airplane_prop.ogg" id="7_ns7m4"]
+[ext_resource type="AudioStream" uid="uid://carpgqa46e52i" path="res://Sounds/25572__jim68000__tabla-100bpm.mp3" id="8_cpk6l"]
+[ext_resource type="Texture2D" uid="uid://c8gmf8vhofcda" path="res://Assets/Sprites/Untitled design (5)-Photoroom.png" id="9_oehgq"]
+[ext_resource type="Script" uid="uid://bpiggvya5f1ke" path="res://Scripts/dialog_panel2.gd" id="10_oehgq"]
+[ext_resource type="Texture2D" uid="uid://drgdpi5ws8hq4" path="res://Assets/Sprites/97f2834f-01c4-4aba-8cf1-78ed5a324938.jpg" id="11_r48s4"]
+[ext_resource type="PackedScene" uid="uid://duyy0b8vbo87a" path="res://Scenes/pause_menu.tscn" id="12_r48s4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ty6p"]
+atlas = ExtResource("4_ns7m4")
+region = Rect2(0, 0, 2048, 3072)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_duf2w"]
+atlas = ExtResource("4_ns7m4")
+region = Rect2(0, 0, 2048, 3072)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_67yhk"]
+atlas = ExtResource("5_cpk6l")
+region = Rect2(0, 0, 2048, 3072)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fw5ef"]
+atlas = ExtResource("6_oehgq")
+region = Rect2(0, 0, 2048, 3072)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gja7y"]
+atlas = ExtResource("5_cpk6l")
+region = Rect2(0, 0, 2048, 3072)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcti2"]
+atlas = ExtResource("4_ns7m4")
+region = Rect2(0, 0, 2048, 3072)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r48s4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ty6p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_duf2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_67yhk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fw5ef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gja7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcti2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r48s4"]
+texture = ExtResource("9_oehgq")
+
+[sub_resource type="Animation" id="Animation_ryap4"]
+resource_name = "fade2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_iklw8"]
+_data = {
+&"fade2": SubResource("Animation_ryap4")
+}
+
+[node name="story3" type="Node2D"]
+
+[node name="Parallax2D2" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(684, 0)
+autoscroll = Vector2(10, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D2"]
+position = Vector2(317, 106)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("1_3r3gk")
+
+[node name="Parallax2D3" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 0.3)
+scroll_offset = Vector2(-856, -15)
+repeat_size = Vector2(960, 0)
+autoscroll = Vector2(-20, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D3"]
+position = Vector2(359, 275)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_laqmy")
+
+[node name="Parallax2D4" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(-182, -130)
+repeat_size = Vector2(960, 0)
+autoscroll = Vector2(-30, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D4"]
+position = Vector2(77, 522)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_8rsoe")
+
+[node name="Parallax2D" type="Parallax2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Parallax2D"]
+position = Vector2(316, 329)
+scale = Vector2(0.32, 0.32)
+sprite_frames = SubResource("SpriteFrames_r48s4")
+autoplay = "default"
+speed_scale = 0.65
+flip_h = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_ns7m4")
+volume_db = -10.0
+autoplay = true
+
+[node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_cpk6l")
+volume_db = 10.0
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="DialogPanel" type="Panel" parent="CanvasLayer"]
+offset_left = 237.0
+offset_top = -116.0
+offset_right = 738.0
+offset_bottom = 351.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_r48s4")
+script = ExtResource("10_oehgq")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/DialogPanel"]
+layout_mode = 0
+offset_left = 170.0
+offset_top = 160.0
+offset_right = 306.0
+offset_bottom = 237.0
+
+[node name="DialogueText" type="RichTextLabel" parent="CanvasLayer/DialogPanel/MarginContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0.44, 0.255493, 0.1408, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(297, 151)
+texture = ExtResource("11_r48s4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer"]
+libraries = {
+&"": SubResource("AnimationLibrary_iklw8")
+}
+autoplay = "fade2"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer2" instance=ExtResource("12_r48s4")]
